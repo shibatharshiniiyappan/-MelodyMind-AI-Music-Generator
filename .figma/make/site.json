@@ -1,0 +1,10 @@
+{
+  "description": "Create unique melodies by selecting genres, adjusting tempo, and generating music effortlessly, perfect for musicians and music enthusiasts.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

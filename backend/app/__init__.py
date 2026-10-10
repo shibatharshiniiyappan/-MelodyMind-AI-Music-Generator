@@ -1,0 +1,1 @@
+"""MelodyMind FastAPI backend."""
