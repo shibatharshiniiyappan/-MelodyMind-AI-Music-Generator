@@ -27,8 +27,9 @@ export type GenerationResult = {
 };
 
 const API_URL = (
-  import.meta.env.VITE_API_URL || "http://localhost:8000"
-).replace(/\/$/, "");
+  import.meta.env.VITE_API_URL ||
+  "https://melodymind-ai-music-generator.onrender.com"
+).replace(/\/+$/, "");
 
 async function request<T>(path: string, options?: RequestInit): Promise<T> {
   const response = await fetch(`${API_URL}${path}`, {
