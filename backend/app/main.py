@@ -5,7 +5,7 @@ from typing import Any
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import StreamingRespo
+from fastapi.responses import StreamingResponse
 
 from .midi_service import as_stream, render_midi
 from .model import generate_notes, load_saved_model, store, train_model
