@@ -28,7 +28,7 @@ export type GenerationResult = {
 
 const API_URL = (
   import.meta.env.VITE_API_URL ||
-  https://melodymind-ai-music-generator-1.onrender.com
+  "https://melodymind-ai-music-generator-1.onrender.com"
 ).replace(/\/+$/, "");
 
 async function request<T>(path: string, options?: RequestInit): Promise<T> {
