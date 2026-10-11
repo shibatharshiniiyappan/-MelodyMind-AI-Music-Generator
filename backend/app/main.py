@@ -5,7 +5,7 @@ from typing import Any
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import StreamingResponse
+from fastapi.responses import StreamingRespo
 
 from .midi_service import as_stream, render_midi
 from .model import generate_notes, load_saved_model, store, train_model
@@ -25,9 +25,10 @@ app = FastAPI(
 )
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=os.getenv(
-        "MELODY_CORS_ORIGINS", "http://localhost:8443,http://localhost:5173"
-    ).split(","),
+allow_origins=os.getenv(
+    "MELODY_CORS_ORIGINS",
+    "https://melodymind-frontend.onrender.com,http://localhost:8443,http://localhost:5173",
+).split(","),
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
